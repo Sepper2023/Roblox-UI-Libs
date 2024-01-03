@@ -156,7 +156,8 @@ function library.new(library_title, cfg_location)
         Cursor.Position = UDim2.new(0, mouse.X, 0, mouse.Y + 36)
     end)
 
-	ScreenGui.Parent = game:GetService("CoreGui")
+	ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+	ScreenGui.ResetOnSpawn = false
 
     function menu.IsOpen()
         return menu.open
